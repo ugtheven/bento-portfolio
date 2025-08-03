@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HelloWorld from '../components/HelloWorld';
+---
+
+<Layout title="Mon Portfolio">
+  <main class="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-4">
+    <HelloWorld client:load name="Développeur" />
+  </main>
+</Layout>

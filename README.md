@@ -1,28 +1,46 @@
-# Bento Portfolio
+# Astro Starter Kit: Basics
 
-My "Bento Design" inspired portfolio, showcasing all my projects!
-
-## 🚀 Ready to start
-
-### Installation
-
-```bash
-npm install
+```sh
+npm create astro@latest -- --template basics
 ```
 
-### Development
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-```bash
-npm run dev
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
 ```
 
-### Build
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-```bash
-npm run build
-```
+## 🧞 Commands
 
-## Designed on figma
+All commands are run from the root of the project, from a terminal:
 
-Check my <a href="https://www.figma.com/design/grB5CAKVVvP9oaR2TmjbV0/Untitled?node-id=1-2&t=jiOHO6TMoiOIMpvy-1">Wireframe</a>
-<img width="1440" height="1024" alt="Desktop - 1" src="https://github.com/user-attachments/assets/0d0cd03c-6423-4ad8-8194-6e340aa5e189" />
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
