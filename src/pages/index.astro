@@ -1,10 +1,117 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HelloWorld from '../components/HelloWorld';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Layout from "../layouts/Layout.astro";
+import ProjectsCarousel from "../components/ProjectsCarousel";
 ---
 
 <Layout title="Mon Portfolio">
-  <main class="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-4">
-    <HelloWorld client:load name="Développeur" />
+  <main
+    class="min-h-screen bg-background text-foreground transition-colors duration-300 flex items-center justify-center"
+  >
+    <div class="max-w-2xl mx-auto p-8 w-full">
+      <!-- ! Hero row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 col-span-1 md:col-span-2 lg:col-span-3"
+        >
+          <CardContent className="flex flex-col gap-2">
+            <CardTitle className="text-card-foreground text-3xl font-semibold">
+              Hey, I'm Ugo !
+            </CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Frontend developer @<a
+                href="https://dametis.com"
+                target="_blank"
+                class="text-primary">Dametis</a
+              >
+            </CardDescription>
+          </CardContent>
+        </Card>
+
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200"
+        >
+          <CardContent> My avatar </CardContent>
+        </Card>
+      </div>
+
+      <!-- ! My techs and tools -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 aspect-square"
+        />
+
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 aspect-square"
+        />
+
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 aspect-square"
+        />
+
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 aspect-square"
+        />
+
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 aspect-square"
+        />
+      </div>
+
+      <!-- ! My projects -->
+      <div class="grid grid-cols-1 mt-4">
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200"
+        >
+          <CardHeader>
+            <CardTitle className="text-card-foreground">
+              My projects
+            </CardTitle>
+            <CardContent>
+              <ProjectsCarousel client:load />
+            </CardContent>
+          </CardHeader>
+        </Card>
+      </div>
+
+      <!-- ! Ask me your questions & contact -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <Card
+          className="bg-card border-border hover:shadow-lg transition-all duration-200 col-span-1 md:col-span-2 lg:col-span-3"
+        >
+          <CardHeader>
+            <CardTitle className="text-card-foreground">
+              Ask me your questions
+            </CardTitle>
+          </CardHeader>
+        </Card>
+
+        <div class="flex flex-col gap-4">
+          <Card
+            className="bg-card border-border hover:shadow-lg transition-all duration-200"
+          >
+            <CardHeader>
+              <CardTitle className="text-card-foreground">
+                Contact me
+              </CardTitle>
+            </CardHeader>
+          </Card>
+
+          <Card
+            className="bg-card border-border hover:shadow-lg transition-all duration-200"
+          >
+            <CardHeader>
+              <CardTitle className="text-card-foreground"> LinkedIn </CardTitle>
+            </CardHeader>
+          </Card>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>

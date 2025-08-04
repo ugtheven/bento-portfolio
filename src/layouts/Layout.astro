@@ -5,14 +5,23 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{Astro.props.title || "Astro Basics"}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
+<script>
+	// Script pour éviter le flash de contenu non stylé
+	const theme = localStorage.getItem('theme') || 
+		(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+	document.documentElement.classList.toggle('dark', theme === 'dark');
+</script>
+
 <style>
+	@import "/src/styles/global.css";
+	
 	html,
 	body {
 		margin: 0;
