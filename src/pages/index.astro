@@ -15,30 +15,32 @@ import FigmaIcon from "../assets/devicon_figma.svg";
 import AvatarIcon from "../assets/avatar.png";
 ---
 
-<Layout title="Mon Portfolio">
+<Layout title="@ugtheven">
   <main
     class="min-h-screen bg-background text-foreground transition-colors duration-300 flex items-center justify-center"
   >
-    <div class="max-w-2xl mx-auto p-8 w-full">
+    <div class="w-full max-w-[650px] mx-auto p-8">
       <!-- ! Hero row -->
       <div class="grid grid-cols-4 gap-4">
-        <Card className="bg-card border-border col-span-3">
-          <CardContent className="flex flex-col gap-2">
-            <CardTitle className="text-card-foreground text-3xl font-semibold">
-              Hey, I'm Ugo !
-            </CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Frontend developer @<a
-                href="https://dametis.com"
-                target="_blank"
-                class="text-primary">Dametis</a
-              >
-            </CardDescription>
-          </CardContent>
+        <Card
+          className="bg-card border-border col-span-3 flex flex-col gap-1 sm:gap-2 p-0 px-[10%] justify-center"
+        >
+          <span
+            class="text-card-foreground text-xl sm:text-2xl md:text-5xl font-semibold"
+          >
+            Hey, I'm Ugo !
+          </span>
+          <span class="text-muted-foreground text-xs sm:text-md md:text-xl">
+            Frontend developer at <a
+              href="https://dametis.com"
+              target="_blank"
+              class="text-primary">Dametis</a
+            >
+          </span>
         </Card>
 
         <Card
-          className="bg-card border-border aspect-square flex items-center justify-center p-4"
+          className="bg-card border-border aspect-square flex items-center justify-center p-[10%]"
         >
           <img
             src={AvatarIcon.src}
@@ -50,34 +52,40 @@ import AvatarIcon from "../assets/avatar.png";
 
       <!-- ! My techs and tools -->
       <div class="grid grid-cols-5 gap-4 mt-4">
-        <Card
-          className="bg-card border-border flex items-center justify-center"
-        >
-          <img src={ReactIcon.src} alt="React" class="w-10 h-10" />
+        <Card className="bg-card border-border p-[25%]">
+          <img
+            src={ReactIcon.src}
+            alt="React"
+            class="w-full h-full object-cover"
+          />
         </Card>
 
-        <Card
-          className="bg-card border-border  flex items-center justify-center"
-        >
-          <img src={TypeScriptIcon.src} alt="TypeScript" class="w-10 h-10" />
+        <Card className="bg-card border-border p-[25%]">
+          <img
+            src={TypeScriptIcon.src}
+            alt="TypeScript"
+            class="w-full h-full object-cover"
+          />
         </Card>
 
-        <Card
-          className="bg-card border-border  flex items-center justify-center"
-        >
-          <img src={GitIcon.src} alt="Git" class="w-10 h-10" />
+        <Card className="bg-card border-border p-[25%]">
+          <img src={GitIcon.src} alt="Git" class="w-full h-full object-cover" />
         </Card>
 
-        <Card
-          className="bg-card border-border  flex items-center justify-center"
-        >
-          <img src={FigmaIcon.src} alt="Figma" class="w-10 h-10" />
+        <Card className="bg-card border-border p-[25%]">
+          <img
+            src={FigmaIcon.src}
+            alt="Figma"
+            class="w-full h-full object-cover"
+          />
         </Card>
 
-        <Card
-          className="bg-card border-border flex items-center justify-center"
-        >
-          <img src={CursorIcon.src} alt="Cursor" class="w-10 h-10" />
+        <Card className="bg-card border-border p-[25%]">
+          <img
+            src={CursorIcon.src}
+            alt="Cursor"
+            class="w-full h-full object-cover"
+          />
         </Card>
       </div>
 
